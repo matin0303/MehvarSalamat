@@ -1,0 +1,229 @@
+@font-face {
+    font-family: font3;
+    src: url('../../font/MORABBA-HEAVY.TTF');
+}
+@font-face {
+    font-family:font1;
+    src: url(Ramollah_MRT.ttf);
+  }
+@font-face {
+    font-family: font4;
+    src: url('../../font/MORABBAVF.TTF');
+}
+.main-page{
+    background: url(../../images/bg.jpg);
+    filter:drop-shadow(50px);
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:0 50px  0 ;   
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    position: relative;
+    z-index: 998;
+}
+.chatbot{
+    position: relative;
+    z-index: 999;
+}
+main .landing-text{
+    margin-top: 100px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-family: font4;
+    margin-left: 100px;
+}
+
+.landing-text h1{
+    font-family: font3;
+    font-size: 3.7rem;
+    margin-bottom: 50px;
+    animation:moveRight_langinText 1s forwards ;
+}
+
+.landing-text p{
+    font-size: 25px;
+    line-height: 45px;
+    margin-bottom: 50px;
+    animation: moveRight_langinText 1s forwards;
+}
+.landing-text button{
+    width: 200px;
+    height: 60px;
+    background-color: #82CD47;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 200px;
+    font-family: font4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.4s;
+    overflow: hidden;
+    animation: moveRight_langinText 1s forwards;
+}
+.landing-text button:hover,
+.landing-text button:focus{
+    background-color: #5ca325;
+    scale: 1.1;
+    box-shadow:  0px 5px 20px greenyellow;
+}
+
+@keyframes moveRight_langinText {
+    from{transform: translateX(-400px);}
+    to{transform: translateX(0);}
+}
+
+.borderRadius{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 140px;
+    background: linear-gradient(90deg, rgba(130,205,71,1) 0%, rgba(0,191,41,1) 100%, rgba(0,0,0,1) 100%);
+    border-radius:42% 58% 69% 31% / 49% 75% 25% 51%    ;
+    animation: border-radius-move 10s infinite;
+}
+@keyframes border-radius-move {
+    0%{
+        border-radius:28% 72% 57% 43% / 55% 56% 44% 45%  ;
+    }
+    50%{
+        border-radius: 75% 25% 36% 64% / 57% 25% 75% 43%  ;
+
+    }
+    
+    100%{
+        border-radius: 28% 72% 57% 43% / 55% 56% 44% 45% ;
+
+    }
+}
+.robot-image{
+    animation: moveLeft_botImage 1s forwards;
+} 
+.robot-image img{
+    display: block;
+    max-width: 700px;
+    max-height: 700px;
+    align-self: flex-end;
+    margin-left: 200px;
+    margin-right: 150px;
+    animation: moveLeft_botImage 1s forwards;
+    user-select: none;
+}
+
+@keyframes moveLeft_botImage {
+    from{transform: translateX(500px);}
+    to{transform: translateX(0);}
+}
+
+@media(max-width:1400){
+
+    .robot-image img{
+        display: block;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+
+
+@media(max-width:1500px){
+
+    .robot-image img{
+        display: block;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .borderRadius{
+        right:0px;
+    }
+}
+
+@media(max-width:1200px){
+
+    .robot-image img{
+        display: block;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    main .landing-text{
+        margin-left: 0;
+    }
+}
+
+@media(max-width:1100px){
+    main{
+        flex-direction: column;
+    }
+    .robot-image img{
+        display: none;
+    }
+    .borderRadius{
+        display: none;
+    }
+    main .landing-text{
+        margin-left: 0;
+    }
+    
+}
+@media(max-width:790px){
+    main{
+        flex-direction: column;
+    }
+    .landing-text h1{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width:630px){
+    .landing-text h1{
+        font-size: 2rem;
+    }
+    .landing-text p{
+        font-size: 20px;
+    }
+}
+@media(max-width:520px){
+    .main-page{
+        padding: 0 20px 0;
+    }
+    .landing-text p{
+        font-size: 17px;
+    }
+}
+@media(max-width:400px){
+    .landing-text h1{
+        font-size: 1.7rem;
+    }
+}
+@media(max-width:390px){
+    .landing-text p{
+        font-size: 15px;
+    }
+    
+}
+@media(max-width:349px){
+    .landing-text h1{
+        font-size: 1.5rem;
+    }
+    .landing-text p{
+        font-size: 13px;
+    }
+}
+
+@media(max-width:250px){
+    .landing-text button{
+        width: 90%;
+    }
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="../src/images/logo.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Mehvar Salamat</title>
+    <style>
+      .boxes {
+        --size: 32px;
+        --duration: 800ms;
+        height: calc(var(--size) * 2);
+        width: calc(var(--size) * 3);
+        position: relative;
+        transform-style: preserve-3d;
+        transform-origin: 50% 50%;
+        margin-top: calc(var(--size) * 1.5 * -1);
+        transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+      }
+
+      .boxes .box {
+        width: var(--size);
+        height: var(--size);
+        top: 0;
+        left: 0;
+        position: absolute;
+        transform-style: preserve-3d;
+      }
+
+      .boxes .box:nth-child(1) {
+        transform: translate(100%, 0);
+        -webkit-animation: box1 var(--duration) linear infinite;
+        animation: box1 var(--duration) linear infinite;
+      }
+
+      .boxes .box:nth-child(2) {
+        transform: translate(0, 100%);
+        -webkit-animation: box2 var(--duration) linear infinite;
+        animation: box2 var(--duration) linear infinite;
+      }
+
+      .boxes .box:nth-child(3) {
+        transform: translate(100%, 100%);
+        -webkit-animation: box3 var(--duration) linear infinite;
+        animation: box3 var(--duration) linear infinite;
+      }
+
+      .boxes .box:nth-child(4) {
+        transform: translate(200%, 0);
+        -webkit-animation: box4 var(--duration) linear infinite;
+        animation: box4 var(--duration) linear infinite;
+      }
+
+      .boxes .box > div {
+        --background: #64e866;
+        --top: auto;
+        --right: auto;
+        --bottom: auto;
+        --left: auto;
+        --translateZ: calc(var(--size) / 2);
+        --rotateY: 0deg;
+        --rotateX: 0deg;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--background);
+        top: var(--top);
+        right: var(--right);
+        bottom: var(--bottom);
+        left: var(--left);
+        transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+      }
+
+      .boxes .box > div:nth-child(1) {
+        --top: 0;
+        --left: 0;
+      }
+
+      .boxes .box > div:nth-child(2) {
+        --background: #1ac407;
+        --right: 0;
+        --rotateY: 90deg;
+      }
+
+      .boxes .box > div:nth-child(3) {
+        --background: #1ac407;
+        --rotateX: -90deg;
+      }
+
+      .boxes .box > div:nth-child(4) {
+        --background: #DBE3F4;
+        --top: 0;
+        --left: 0;
+        --translateZ: calc(var(--size) * 3 * -1);
+      }
+
+      @-webkit-keyframes box1 {
+        0%, 50% {
+          transform: translate(100%, 0);
+        }
+
+        100% {
+          transform: translate(200%, 0);
+        }
+      }
+
+      @keyframes box1 {
+        0%, 50% {
+          transform: translate(100%, 0);
+        }
+
+        100% {
+          transform: translate(200%, 0);
+        }
+      }
+
+      @-webkit-keyframes box2 {
+        0% {
+          transform: translate(0, 100%);
+        }
+
+        50% {
+          transform: translate(0, 0);
+        }
+
+        100% {
+          transform: translate(100%, 0);
+        }
+      }
+
+      @keyframes box2 {
+        0% {
+          transform: translate(0, 100%);
+        }
+
+        50% {
+          transform: translate(0, 0);
+        }
+
+        100% {
+          transform: translate(100%, 0);
+        }
+      }
+
+      @-webkit-keyframes box3 {
+        0%, 50% {
+          transform: translate(100%, 100%);
+        }
+
+        100% {
+          transform: translate(0, 100%);
+        }
+      }
+
+      @keyframes box3 {
+        0%, 50% {
+          transform: translate(100%, 100%);
+        }
+
+        100% {
+          transform: translate(0, 100%);
+        }
+      }
+
+      @-webkit-keyframes box4 {
+        0% {
+          transform: translate(200%, 0);
+        }
+
+        50% {
+          transform: translate(200%, 100%);
+        }
+
+        100% {
+          transform: translate(100%, 100%);
+        }
+      }
+
+      @keyframes box4 {
+        0% {
+          transform: translate(200%, 0);
+        }
+
+        50% {
+          transform: translate(200%, 100%);
+        }
+
+        100% {
+          transform: translate(100%, 100%);
+        }
+      }
+    </style>
+  
+  
+    <svg   id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+      #svg{
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: -280px;}
+
+      .path-0{
+        animation:pathAnim-0 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-0{
+        0%{
+          d: path("M 0,400 L 0,60 C 117.73333333333329,69.19999999999999 235.46666666666658,78.39999999999999 419,82 C 602.5333333333334,85.60000000000001 851.8666666666668,83.6 1033,79 C 1214.1333333333332,74.4 1327.0666666666666,67.2 1440,60 L 1440,400 L 0,400 Z");
+        }
+        25%{
+          d: path("M 0,400 L 0,60 C 157.86666666666667,61.46666666666666 315.73333333333335,62.93333333333332 468,68 C 620.2666666666667,73.06666666666668 766.9333333333334,81.73333333333333 928,81 C 1089.0666666666666,80.26666666666667 1264.5333333333333,70.13333333333333 1440,60 L 1440,400 L 0,400 Z");
+        }
+        50%{
+          d: path("M 0,400 L 0,60 C 125.46666666666664,73.6 250.93333333333328,87.2 437,87 C 623.0666666666667,86.8 869.7333333333333,72.80000000000001 1047,66 C 1224.2666666666667,59.199999999999996 1332.1333333333332,59.599999999999994 1440,60 L 1440,400 L 0,400 Z");
+        }
+        75%{
+          d: path("M 0,400 L 0,60 C 124.26666666666671,71.73333333333333 248.53333333333342,83.46666666666667 435,82 C 621.4666666666666,80.53333333333333 870.1333333333334,65.86666666666667 1048,60 C 1225.8666666666666,54.13333333333333 1332.9333333333334,57.06666666666666 1440,60 L 1440,400 L 0,400 Z");
+        }
+        100%{
+          d: path("M 0,400 L 0,60 C 117.73333333333329,69.19999999999999 235.46666666666658,78.39999999999999 419,82 C 602.5333333333334,85.60000000000001 851.8666666666668,83.6 1033,79 C 1214.1333333333332,74.4 1327.0666666666666,67.2 1440,60 L 1440,400 L 0,400 Z");
+        }
+      }
+      @media(max-width:1300px){
+        #svg{
+          top: -220px;
+        }
+      }
+      @media(max-width:1200px){
+        #svg{
+          top: -200px;
+        }
+      }
+      @media(max-width:1100px){
+        #svg{
+          top: -180px;
+        }
+      }
+      @media(max-width:1000px){
+        #svg{
+          top: -160px;
+        }
+      }
+      @media(max-width:1000px){
+        #svg{
+          top: -160px;
+        }
+      }
+      @media(max-width:900px){
+        #svg{
+          top: -140px;
+        }
+      }
+      @media(max-width:800px){
+        #svg{
+          top: -120px;
+        }
+      }
+      @media(max-width:750px){
+        #svg{
+          display: none;
+        }
+      }
+      </style><defs><linearGradient id="gradient" x1="90%" y1="21%" x2="10%" y2="79%"><stop offset="5%" stop-color="#009a38"></stop><stop offset="95%" stop-color="#009a38"></stop></linearGradient></defs><path d="M 0,400 L 0,60 C 117.73333333333329,69.19999999999999 235.46666666666658,78.39999999999999 419,82 C 602.5333333333334,85.60000000000001 851.8666666666668,83.6 1033,79 C 1214.1333333333332,74.4 1327.0666666666666,67.2 1440,60 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.265" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path><style>
+      .path-1{
+        animation:pathAnim-1 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-1{
+        0%{
+          d: path("M 0,400 L 0,140 C 176.53333333333336,123.6 353.0666666666667,107.2 497,113 C 640.9333333333333,118.8 752.2666666666667,146.8 904,155 C 1055.7333333333333,163.2 1247.8666666666668,151.6 1440,140 L 1440,400 L 0,400 Z");
+        }
+        25%{
+          d: path("M 0,400 L 0,140 C 203.2,156.26666666666665 406.4,172.53333333333333 553,166 C 699.6,159.46666666666667 789.5999999999999,130.13333333333333 928,122 C 1066.4,113.86666666666666 1253.2,126.93333333333334 1440,140 L 1440,400 L 0,400 Z");
+        }
+        50%{
+          d: path("M 0,400 L 0,140 C 178.8,150.26666666666665 357.6,160.53333333333333 512,154 C 666.4,147.46666666666667 796.4000000000001,124.13333333333334 947,119 C 1097.6,113.86666666666666 1268.8,126.93333333333334 1440,140 L 1440,400 L 0,400 Z");
+        }
+        75%{
+          d: path("M 0,400 L 0,140 C 180.93333333333334,141.46666666666667 361.8666666666667,142.93333333333334 514,140 C 666.1333333333333,137.06666666666666 789.4666666666667,129.73333333333332 939,129 C 1088.5333333333333,128.26666666666668 1264.2666666666667,134.13333333333333 1440,140 L 1440,400 L 0,400 Z");
+        }
+        100%{
+          d: path("M 0,400 L 0,140 C 176.53333333333336,123.6 353.0666666666667,107.2 497,113 C 640.9333333333333,118.8 752.2666666666667,146.8 904,155 C 1055.7333333333333,163.2 1247.8666666666668,151.6 1440,140 L 1440,400 L 0,400 Z");
+        }
+      }</style><defs><linearGradient id="gradient" x1="90%" y1="21%" x2="10%" y2="79%"><stop offset="5%" stop-color="#009a38"></stop><stop offset="95%" stop-color="#009a38"></stop></linearGradient></defs><path d="M 0,400 L 0,140 C 176.53333333333336,123.6 353.0666666666667,107.2 497,113 C 640.9333333333333,118.8 752.2666666666667,146.8 904,155 C 1055.7333333333333,163.2 1247.8666666666668,151.6 1440,140 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 200)"></path><style>
+      .path-2{
+        animation:pathAnim-2 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-2{
+        0%{
+          d: path("M 0,400 L 0,220 C 127.0666666666666,237.86666666666667 254.1333333333332,255.73333333333335 433,248 C 611.8666666666668,240.26666666666665 842.5333333333335,206.9333333333333 1019,198 C 1195.4666666666665,189.0666666666667 1317.7333333333331,204.53333333333336 1440,220 L 1440,400 L 0,400 Z");
+        }
+        25%{
+          d: path("M 0,400 L 0,220 C 155.19999999999993,209.06666666666666 310.39999999999986,198.13333333333335 472,204 C 633.6000000000001,209.86666666666665 801.6000000000001,232.5333333333333 964,238 C 1126.3999999999999,243.4666666666667 1283.1999999999998,231.73333333333335 1440,220 L 1440,400 L 0,400 Z");
+        }
+        50%{
+          d: path("M 0,400 L 0,220 C 135.86666666666667,215.86666666666667 271.73333333333335,211.73333333333332 416,214 C 560.2666666666667,216.26666666666668 712.9333333333334,224.93333333333337 885,227 C 1057.0666666666666,229.06666666666663 1248.5333333333333,224.5333333333333 1440,220 L 1440,400 L 0,400 Z");
+        }
+        75%{
+          d: path("M 0,400 L 0,220 C 175.86666666666667,227.60000000000002 351.73333333333335,235.20000000000002 522,234 C 692.2666666666667,232.79999999999998 856.9333333333334,222.79999999999998 1009,219 C 1161.0666666666666,215.20000000000002 1300.5333333333333,217.60000000000002 1440,220 L 1440,400 L 0,400 Z");
+        }
+        100%{
+          d: path("M 0,400 L 0,220 C 127.0666666666666,237.86666666666667 254.1333333333332,255.73333333333335 433,248 C 611.8666666666668,240.26666666666665 842.5333333333335,206.9333333333333 1019,198 C 1195.4666666666665,189.0666666666667 1317.7333333333331,204.53333333333336 1440,220 L 1440,400 L 0,400 Z");
+        }
+      }</style><defs><linearGradient id="gradient" x1="90%" y1="21%" x2="10%" y2="79%"><stop offset="5%" stop-color="#009a38"></stop><stop offset="95%" stop-color="#009a38"></stop></linearGradient></defs><path d="M 0,400 L 0,220 C 127.0666666666666,237.86666666666667 254.1333333333332,255.73333333333335 433,248 C 611.8666666666668,240.26666666666665 842.5333333333335,206.9333333333333 1019,198 C 1195.4666666666665,189.0666666666667 1317.7333333333331,204.53333333333336 1440,220 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 200)"></path><style>
+      .path-3{
+        animation:pathAnim-3 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-3{
+        0%{
+          d: path("M 0,400 L 0,300 C 126.13333333333333,304 252.26666666666665,308 420,304 C 587.7333333333333,300 797.0666666666666,288 974,286 C 1150.9333333333334,284 1295.4666666666667,292 1440,300 L 1440,400 L 0,400 Z");
+        }
+        25%{
+          d: path("M 0,400 L 0,300 C 177.59999999999997,314.93333333333334 355.19999999999993,329.8666666666667 516,322 C 676.8000000000001,314.1333333333333 820.8,283.4666666666667 972,276 C 1123.2,268.5333333333333 1281.6,284.26666666666665 1440,300 L 1440,400 L 0,400 Z");
+        }
+        50%{
+          d: path("M 0,400 L 0,300 C 200.40000000000003,299.3333333333333 400.80000000000007,298.66666666666663 553,298 C 705.1999999999999,297.33333333333337 809.2,296.6666666666667 949,297 C 1088.8,297.3333333333333 1264.4,298.66666666666663 1440,300 L 1440,400 L 0,400 Z");
+        }
+        75%{
+          d: path("M 0,400 L 0,300 C 180,303.8666666666667 360,307.7333333333333 516,310 C 672,312.2666666666667 804,312.93333333333334 954,311 C 1104,309.06666666666666 1272,304.5333333333333 1440,300 L 1440,400 L 0,400 Z");
+        }
+        100%{
+          d: path("M 0,400 L 0,300 C 126.13333333333333,304 252.26666666666665,308 420,304 C 587.7333333333333,300 797.0666666666666,288 974,286 C 1150.9333333333334,284 1295.4666666666667,292 1440,300 L 1440,400 L 0,400 Z");
+        }
+      }</style><defs><linearGradient id="gradient" x1="90%" y1="21%" x2="10%" y2="79%"><stop offset="5%" stop-color="#009a38"></stop><stop offset="95%" stop-color="#009a38"></stop></linearGradient></defs><path d="M 0,400 L 0,300 C 126.13333333333333,304 252.26666666666665,308 420,304 C 587.7333333333333,300 797.0666666666666,288 974,286 C 1150.9333333333334,284 1295.4666666666667,292 1440,300 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-3" transform="rotate(-180 720 200)"></path></svg>
+    
+  </head>
+  <body>
+    
+    <div class="loading" style="width: 100%;height: 120vh;position: relative;z-index: 10000;display: flex;align-items: center;justify-content: center;">
+      <div class="boxes">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    </div>
+
+    <div id="root"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded",()=>{
+        const loading = document.querySelector('.loading');
+        loading.remove()
+        const svg = document.getElementById('svg');
+        svg.style.opacity = '1';
+      })
+    </script>
+  </body>
+</html>

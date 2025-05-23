@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+body{
+    background-color: hsl(0, 0%, 100%);
+    max-width:1650px ;
+    position: relative;
+    overflow-x: hidden;
+}

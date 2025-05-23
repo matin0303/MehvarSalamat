@@ -1,0 +1,40 @@
+body{
+    width: 100%;
+}
+.bmimain-div{
+    overflow-x: hidden; 
+}
+.bmipage{
+    
+    width: 100%;
+    height: 1fr;
+    background: url(../../images/bg.jpg);
+    filter:drop-shadow(50px);
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bmipage main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bmipage header{
+    width: 100%;
+}
+.bmipage header nav{
+    margin:0 50px 0;
+}
+.bmipage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.bmipageFooter{
+    margin-top: 0px;
+}
