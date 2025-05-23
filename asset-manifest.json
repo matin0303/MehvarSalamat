@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MehvarSalamat/static/css/main.52654ab4.css",
-    "main.js": "/MehvarSalamat/static/js/main.0b82a9ba.js",
+    "main.js": "/MehvarSalamat/static/js/main.69250dc1.js",
     "static/media/bg.jpg": "/MehvarSalamat/static/media/bg.e20bfaf1419cd1c8927b.jpg",
     "static/media/bot.png": "/MehvarSalamat/static/media/bot.4ce771b94354c4510f0c.png",
     "static/media/img2.jpg": "/MehvarSalamat/static/media/img2.6306a3865aaae7e5c216.jpg",
@@ -21,10 +21,10 @@
     "static/media/Mj_Sazeh Bold_0.ttf": "/MehvarSalamat/static/media/Mj_Sazeh Bold_0.26b11a7e019c8010abd4.ttf",
     "index.html": "/MehvarSalamat/index.html",
     "main.52654ab4.css.map": "/MehvarSalamat/static/css/main.52654ab4.css.map",
-    "main.0b82a9ba.js.map": "/MehvarSalamat/static/js/main.0b82a9ba.js.map"
+    "main.69250dc1.js.map": "/MehvarSalamat/static/js/main.69250dc1.js.map"
   },
   "entrypoints": [
     "static/css/main.52654ab4.css",
-    "static/js/main.0b82a9ba.js"
+    "static/js/main.69250dc1.js"
   ]
 }
