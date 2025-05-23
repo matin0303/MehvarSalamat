@@ -35,7 +35,7 @@ function Navbar(){
                 
             </div>
             <ul className='nav-bar'>
-                <li> <Link to='/MehvarSalamat'>خانه</Link></li>
+                <li> <Link to='/MehvarSalamat/'>خانه</Link></li>
                 <li>  <Link to='/consultants'> مشاور &thinsp;ها  </Link></li>
                 <li><Link to='/newsandarticles'> اخبار &thinsp;و &thinsp;مقالات</Link></li>
                 <li onClick={openGuide}><a>راهنمای ربات</a></li>
@@ -48,7 +48,7 @@ function Navbar(){
 
             <div className="hamber-nav-menu">
                 <ul>
-                    <Link to='/MehvarSalamat'><li><span className="material-symbols-outlined">home</span>خانه </li></Link>
+                    <Link to='/MehvarSalamat/'><li><span className="material-symbols-outlined">home</span>خانه </li></Link>
                     <Link to='/consultants'><li><span className="material-symbols-outlined">woman</span> مشاور ها </li></Link>
                     <Link to='/newsandarticles'> <li><span className="material-symbols-outlined">news</span> اخبار و مقالات</li></Link>
                     <Link to='#'><li onClick={openGuide}><span className="material-symbols-outlined">smart_toy</span> راهنمای ربات</li></Link>
